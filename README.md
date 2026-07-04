@@ -1,79 +1,80 @@
-# SRKT B2B E-commerce Platform
+# 🌸 SRKT — Premium B2B Saree E-Commerce Platform
 
-This repository is organized as a monorepo containing both the mobile client application (named SRKT) and the backend services.
+Welcome to **SRKT**, a premium mobile client application designed for digital wholesale saree sourcing and client demonstrations. This application delivers a state-of-the-art catalog experience with wholesale order/enquiry capabilities, built on top of a highly responsive, modern UI.
+
+---
+
+## 📱 Interactive Client Demo (Install APK)
+
+To allow watchers, stakeholders, and clients to test the application immediately with full interaction, the pre-built Android release package is hosted directly within this repository.
+
+> [!TIP]
+> ### [⬇️ Download & Install the SRKT Demo APK](https://github.com/CoderGUY47/SRKT-saree-app/raw/main/releases/app-arm64-v8a-release.apk)
+> *(Requires Android 8.0+ and ARM64-v8a architecture, standard for 99% of modern Android devices).*
+
+---
+
+## 🌟 Key Application Features
+
+* **✨ Wholesale Saree Catalog**: Exquisite catalog layout with product categorization, collections browsing, responsive grid search, and custom filter metrics.
+* **🛍️ Wishlist & Cart System**: Interactive product selection where wholesale clients can curate lists and manage quantities.
+* **💬 WhatsApp & Enquiry Integration**: Submit order checklists directly to suppliers or generate instant WhatsApp booking notes.
+* **🛡️ Client Credentials (Demo Access)**:
+  * **Admin Account**: `admin@gmail.com` | Password: `1234`
+  * **Wholesale Client**: `user@gmail.com` | Password: `1234`
+* **📊 Admin Panel Dashboard**: Built-in dashboard displaying real-time metrics, active user registrations, wholesale product management tabs, and active buyer enquiries.
+
+---
+
+## 🛠️ Technology Stack
+
+* **Frontend Framework**: [Flutter (Dart SDK 3.x)](https://flutter.dev)
+* **Design Guidelines**: Material Design 3 with custom warm/luxury color grading.
+* **Architecture**: Monorepo separating mobile frontend client and backend nodes.
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-B2B_Ecommerce/
+SRKT-saree-app/
 ├── README.md               # Root documentation (this file)
-├── SRKT/                   # Flutter Mobile Client Application
-│   ├── lib/                # Dart source files (Models, Providers, Screens, Widgets)
-│   └── pubspec.yaml        # Flutter dependencies and assets
-└── backend/                # Backend API & Database Services
+├── SETUP_GUIDE.md          # Comprehensive build, running, and deploy guide
+├── releases/               # Client-facing release binaries
+│   └── app-arm64-v8a-release.apk
+├── SRKT/                   # Flutter Mobile Client Source
+│   ├── lib/                # Dart source files (Models, Screens, Providers)
+│   ├── assets/             # Product and UI image assets
+│   └── pubspec.yaml        # Flutter dependencies
+└── backend/                # Backend API Services (empty placeholders)
 ```
 
 ---
 
-## 💻 Environment Setup (Mobile Client)
+## 🚀 Quick Start (For Developers)
 
-To run the Flutter mobile application, verify your environment or install the required tools using the setup guide in [SETUP_GUIDE.md](file:///f:/B2B_Ecommerce/SETUP_GUIDE.md).
+### 1. Prerequisite Checklist
+Make sure you have **Flutter SDK** and **Java JDK 17** installed and configured on your path. Run this command to verify:
+```cmd
+flutter doctor
+```
+*(No Android Studio installation is required to build or run this application).*
 
-The environment uses:
-1. **Java Development Kit (JDK 17)**
-2. **Flutter SDK**
-3. **Android SDK Command-line Tools** (configured without Android Studio)
-
-Run `flutter doctor` in a new terminal to verify your configuration.
-
----
-
-## 📱 Running the Android Emulator
-
-If the emulator fails to show up visually on your screen, use these command-line steps:
-
-1. **Clean stuck background processes**:
-   ```cmd
-   taskkill /F /IM emulator.exe
-   taskkill /F /IM qemu-system-x86_64.exe
-   ```
-2. **Launch the emulator cleanly**:
+### 2. Run Locally on Emulator
+1. Cold-boot your configured emulator:
    ```cmd
    %LOCALAPPDATA%\Android\Sdk\emulator\emulator.exe -avd medium_phone -no-snapshot-load
    ```
-3. **Compile and run the Flutter app** (once the emulator is booted):
+2. Launch the application:
    ```cmd
-   cd /d f:\B2B_Ecommerce\SRKT && flutter run -d emulator-5554 --no-pub
+   cd SRKT
+   flutter run -d emulator-5554 --no-pub
    ```
 
----
-
-## ⚙️ Backend Services Guidelines
-
-The `/backend` folder houses the database schemas, server services, and webhooks.
-
-### Recommended Project Structure
+### 3. Compile a New Release
+To compile the APK binary yourself:
+```cmd
+cd SRKT
+flutter build apk --release --split-per-abi
 ```
-backend/
-├── src/
-│   ├── controllers/   # Route handler logic
-│   ├── models/        # Database models
-│   ├── routes/        # Endpoint routing
-│   └── app.js         # Entry point script
-├── docker-compose.yml # Containerized services
-└── package.json       # Backend dependencies
-```
-
-### Mobile Integration Standards
-* **Protocol**: REST APIs over HTTPS returning JSON payloads.
-* **Authentication**: Bearer JWT tokens in authorization headers.
-* **Standard Response Format**:
-  ```json
-  {
-    "success": true,
-    "data": {},
-    "error": null
-  }
-  ```
+Your outputs will be generated in `SRKT/build/app/outputs/flutter-apk/`.
