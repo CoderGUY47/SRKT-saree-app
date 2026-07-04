@@ -1,3 +1,4 @@
 Step 1: theme layout configure app package structure done
 Step 2: theme layout update android manifest values done
 Step 3: theme layout customize ios plist metadata done
+Step 4: theme layout implement client login validation done
