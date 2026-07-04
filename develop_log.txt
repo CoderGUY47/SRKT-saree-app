@@ -12,3 +12,4 @@ Step 11: theme layout configure admin settings parameters done
 Step 12: theme layout fix unused field lint warnings done
 Step 13: theme layout optimize tree shaking for release build done
 Step 14: theme layout generate client demo binary file done
+Step 15: theme layout update setup guide markdown docs done
