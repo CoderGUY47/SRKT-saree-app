@@ -1,0 +1,1 @@
+Step 1: theme layout configure app package structure done
