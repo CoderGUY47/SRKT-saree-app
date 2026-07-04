@@ -10,3 +10,4 @@ Step 9: theme layout design admin stats panel metrics done
 Step 10: theme layout implement back-office enquiry list done
 Step 11: theme layout configure admin settings parameters done
 Step 12: theme layout fix unused field lint warnings done
+Step 13: theme layout optimize tree shaking for release build done
