@@ -36,7 +36,7 @@ void main() {
     await tester.pumpAndSettle();
 
     // Enter email/mobile
-    await tester.enterText(find.byType(TextFormField).at(0), 'admin@gmail');
+    await tester.enterText(find.byType(TextFormField).at(0), 'user@gmail.com');
 
     // Enter password
     await tester.enterText(find.byType(TextFormField).at(1), '1234');

@@ -103,8 +103,6 @@ class _CollectionsScreenState extends State<CollectionsScreen> {
     },
   ];
 
-  final String _selectedFilter = 'All';
-
   void _showToast(String message) {
     final overlay = Overlay.of(context);
     late OverlayEntry entry;
