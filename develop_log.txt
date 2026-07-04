@@ -7,3 +7,4 @@ Step 6: theme layout add premium collection details view done
 Step 7: theme layout configure wholesale cart checkout done
 Step 8: theme layout wire whatsapp contact routing done
 Step 9: theme layout design admin stats panel metrics done
+Step 10: theme layout implement back-office enquiry list done
