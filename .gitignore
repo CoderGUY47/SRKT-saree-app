@@ -1,0 +1,10 @@
+# Logs
+*.log
+
+# IDEs
+.idea/
+.vscode/
+
+# Local/system files
+.DS_Store
+Thumbs.db
