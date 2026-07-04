@@ -4,3 +4,4 @@ Step 3: theme layout customize ios plist metadata done
 Step 4: theme layout implement client login validation done
 Step 5: theme layout restructure saree catalog grid done
 Step 6: theme layout add premium collection details view done
+Step 7: theme layout configure wholesale cart checkout done
