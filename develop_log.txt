@@ -15,3 +15,4 @@ Step 14: theme layout generate client demo binary file done
 Step 15: theme layout update setup guide markdown docs done
 Step 16: theme layout build premium root readme documentation done
 Step 17: theme layout configure github actions workflow path done
+Step 18: theme layout resolve widget test login navigation done
