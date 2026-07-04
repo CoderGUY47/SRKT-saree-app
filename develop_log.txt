@@ -1,1 +1,2 @@
 Step 1: theme layout configure app package structure done
+Step 2: theme layout update android manifest values done
